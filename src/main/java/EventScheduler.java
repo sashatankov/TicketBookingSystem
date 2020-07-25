@@ -5,7 +5,7 @@ import java.util.*;
 public class EventScheduler {
 
 
-    private Map<LocalDate, Map<AuditoriumNumber, LinkedList<EntertainmentEvent>>> screenings;
+    private Map<LocalDate, Map<Long, LinkedList<EntertainmentEvent>>> screenings;
 
     public EventScheduler(){
         this.screenings = new HashMap<>();
@@ -20,8 +20,8 @@ public class EventScheduler {
         if(!this.screenings.containsKey(screeningDate))
             this.screenings.put(screeningDate, this.createEmptySchedule());
 
-        Map<AuditoriumNumber, LinkedList<EntertainmentEvent>> screeningsOnDate = this.screenings.get(screeningDate);
-        for(AuditoriumNumber auditoriumNumber: screeningsOnDate.keySet()) {
+        Map<Long, LinkedList<EntertainmentEvent>> screeningsOnDate = this.screenings.get(screeningDate);
+        for(long auditoriumNumber: screeningsOnDate.keySet()) {
             if(this.insertEventInSchedule(event, screeningsOnDate.get(auditoriumNumber)))
                 return true;
         }
@@ -38,8 +38,8 @@ public class EventScheduler {
         if(!this.screenings.containsKey(screeningDate))
             return false;
 
-        Map<AuditoriumNumber, LinkedList<EntertainmentEvent>> screeningsOnDate = this.screenings.get(screeningDate);
-        for(AuditoriumNumber auditoriumNumber: screeningsOnDate.keySet()) {
+        Map<Long, LinkedList<EntertainmentEvent>> screeningsOnDate = this.screenings.get(screeningDate);
+        for(long auditoriumNumber: screeningsOnDate.keySet()) {
             if(this.removeEventInSchedule(screeningToRemove, screeningsOnDate.get(auditoriumNumber)))
                 return true;
         }
@@ -108,11 +108,11 @@ public class EventScheduler {
         return mStartTime.plusMinutes(durationInMinutes).isBefore(toInsertStartTime);
     }
 
-    private Map<AuditoriumNumber, LinkedList<EntertainmentEvent>> createEmptySchedule(){
+    private Map<Long, LinkedList<EntertainmentEvent>> createEmptySchedule(){
         // TODO think of a better name for method
 
-        Map<AuditoriumNumber, LinkedList<EntertainmentEvent>> map = new HashMap<>();
-        for(AuditoriumNumber number: AuditoriumNumber.values())
+        Map<Long, LinkedList<EntertainmentEvent>> map = new HashMap<>();
+        for(long number: Auditorium.getAllAuditoriumNumbers())
             map.put(number, new LinkedList<>());
 
         return map;

@@ -1,12 +1,13 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Auditorium {
 
     private List<List<Boolean>> seats;
     private long auditoriumNumber;
+    public static Set<Long> auditoriumNumbers = new HashSet<>();
     public Auditorium(long auditoriumNumber, int rows, int seatsInRow) {
 
+        auditoriumNumbers.add(auditoriumNumber);
         this.auditoriumNumber = auditoriumNumber;
         this.seats = new ArrayList<>();
 
@@ -59,6 +60,10 @@ public class Auditorium {
 
     public long getAuditoriumnumber(){
         return this.auditoriumNumber;
+    }
+
+    public static Set<Long> getAllAuditoriumNumbers(){
+        return auditoriumNumbers;
     }
 
 

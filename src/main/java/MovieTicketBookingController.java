@@ -1,15 +1,17 @@
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class MovieTicketBookingController {
 
 
-    private EventScheduler scheduler;
+    private MovieScreeningsController screenings;
     private Map<MovieScreening, Auditorium> screeningSeating;
     private static final double DEFAULT_TICKET_PRICE = 50;
 
-    public MovieTicketBookingController(EventScheduler scheduler) {
-        this.scheduler = scheduler;
+    public MovieTicketBookingController(MovieScreeningsController screeningsController) {
+        this.screenings = screeningsController;
+        this.screeningSeating = new HashMap<>();
     }
 
 
@@ -25,10 +27,6 @@ public class MovieTicketBookingController {
         return new MovieTicket(screening,
                 auditorium.getAuditoriumnumber(),
                 row, seatInRow, DEFAULT_TICKET_PRICE);
-
-    }
-
-    public List<EntertainmentEvent> getScreenings(String movieName) {
 
     }
 

@@ -14,6 +14,6 @@ public class MovieScreeningGenerator {
     }
 
     public MovieScreening randomScreening(){
-
+        return null;
     }
 }
