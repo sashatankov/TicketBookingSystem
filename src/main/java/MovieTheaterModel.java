@@ -1,4 +1,5 @@
-
+import com.sashatankov.booking.MovieTicketBookingController;
+import com.sashatankov.events.MovieScreeningsController;
 
 public class MovieTheaterModel {
 

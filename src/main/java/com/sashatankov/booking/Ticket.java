@@ -1,5 +1,9 @@
+package com.sashatankov.booking;
+
+import com.sashatankov.events.EntertainmentEvent;
+
 /**
- * an abstract Ticket to an abstract event
+ * an abstract com.sashatankov.booking.Ticket to an abstract event
  */
 public interface Ticket {
 

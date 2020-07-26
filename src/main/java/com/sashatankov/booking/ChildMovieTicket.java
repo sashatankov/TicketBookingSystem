@@ -1,3 +1,8 @@
+package com.sashatankov.booking;
+
+import com.sashatankov.events.EntertainmentEvent;
+import com.sashatankov.events.MovieScreening;
+
 /**
  * class representing a movie ticket for a child
  */

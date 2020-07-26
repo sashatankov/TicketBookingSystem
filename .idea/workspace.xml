@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4c241d3-fe45-463a-b83d-46eb64c94416" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/EventVenue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Auditorium.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Auditorium.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ChildMovieTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ChildMovieTicket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/EntertainmentEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EntertainmentEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/EventScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EventScheduler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MovieScreening.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MovieScreening.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MovieScreeningsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MovieScreeningsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MovieTheaterClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MovieTheaterClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MovieTheaterModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MovieTheaterModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MovieTheaterServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MovieTheaterServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MovieTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MovieTicket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MovieTicketBookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MovieTicketBookingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PaymentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PaymentModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PaymentModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/StudentMovieTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StudentMovieTicket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ticket.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +67,7 @@
       <workItem from="1595601826092" duration="16648000" />
       <workItem from="1595619450914" duration="8165000" />
       <workItem from="1595694414101" duration="4589000" />
-      <workItem from="1595738119285" duration="17560000" />
+      <workItem from="1595738119285" duration="18703000" />
     </task>
     <servers />
   </component>

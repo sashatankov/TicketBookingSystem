@@ -1,3 +1,4 @@
+package com.sashatankov.booking;
 
 public class PaymentModel {
 

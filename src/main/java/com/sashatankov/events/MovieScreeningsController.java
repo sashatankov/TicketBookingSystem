@@ -1,3 +1,5 @@
+package com.sashatankov.events;
+
 import java.time.LocalDate;
 import java.util.*;
 
@@ -33,7 +35,7 @@ public class MovieScreeningsController {
 
     /**
      * adds screening to the schedule
-     * @param movie a movie to add, a Movie object
+     * @param movie a movie to add, a com.sashatankov.events.Movie object
      * @param date date of the screening
      * @param time time of the screening
      * @return true, if screening added successfully, false otherwise

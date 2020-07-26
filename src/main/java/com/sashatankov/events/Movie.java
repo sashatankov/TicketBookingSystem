@@ -1,3 +1,5 @@
+package com.sashatankov.events;
+
 import java.util.Objects;
 
 /**
@@ -49,7 +51,7 @@ public class Movie {
 
     @Override
     public String toString() {
-        return "Movie Name: " + this.getName() + "\n" +
+        return "com.sashatankov.events.Movie Name: " + this.getName() + "\n" +
                 "Genre: " + this.getGenre() + "\n" +
                 "Duration: " + this.getDurationInMinutes() + " minutes\n";
     }

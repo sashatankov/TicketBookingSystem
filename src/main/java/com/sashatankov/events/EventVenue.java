@@ -1,3 +1,5 @@
+package com.sashatankov.events;
+
 /**
  * an abstract place to have an event in
  */

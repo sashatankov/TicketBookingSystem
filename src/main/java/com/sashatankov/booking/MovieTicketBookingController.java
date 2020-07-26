@@ -1,3 +1,9 @@
+package com.sashatankov.booking;
+
+import com.sashatankov.events.Auditorium;
+import com.sashatankov.events.MovieScreening;
+import com.sashatankov.events.MovieScreeningsController;
+
 import java.util.HashMap;
 import java.util.Map;
 

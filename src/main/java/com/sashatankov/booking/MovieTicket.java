@@ -1,5 +1,7 @@
+package com.sashatankov.booking;
 
-
+import com.sashatankov.events.EntertainmentEvent;
+import com.sashatankov.events.MovieScreening;
 
 public class MovieTicket implements Ticket {
 

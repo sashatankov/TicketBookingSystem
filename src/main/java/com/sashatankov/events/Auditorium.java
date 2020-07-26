@@ -1,5 +1,7 @@
+package com.sashatankov.events;
+
 import java.util.*;
-// TODO an abstraction/interface of <EventVenue>?
+// TODO an abstraction/interface of <com.sashatankov.events.EventVenue>?
 /**
  * a Class representing a seating in am auditorium for a
  * particular event.
@@ -120,7 +122,7 @@ public class Auditorium implements EventVenue {
      */
     @Override
     public String getName() {
-        return "Auditorium " + this.getId();
+        return "com.sashatankov.events.Auditorium " + this.getId();
     }
 
 
