@@ -32,15 +32,15 @@ public class EventScheduler {
 
     public boolean removeEvent(EntertainmentEvent event) {
 
-        MovieScreening screeningToRemove = (MovieScreening) event;
-        LocalDate screeningDate = screeningToRemove.getEventDate();
+
+        LocalDate screeningDate = event.getEventDate();
 
         if(!this.screenings.containsKey(screeningDate))
             return false;
 
         Map<Long, LinkedList<EntertainmentEvent>> screeningsOnDate = this.screenings.get(screeningDate);
         for(long auditoriumNumber: screeningsOnDate.keySet()) {
-            if(this.removeEventInSchedule(screeningToRemove, screeningsOnDate.get(auditoriumNumber)))
+            if(this.removeEventInSchedule(event, screeningsOnDate.get(auditoriumNumber)))
                 return true;
         }
 
@@ -76,10 +76,10 @@ public class EventScheduler {
 
     }
 
-    private boolean removeEventInSchedule(MovieScreening screeningToRemove, LinkedList<EntertainmentEvent> screeningsOnDate) {
+    private boolean removeEventInSchedule(EntertainmentEvent eventToRemove, LinkedList<EntertainmentEvent> eventsOnDate) {
 
         // TODO not working, will not remove
-        return screeningsOnDate.remove(screeningToRemove);
+        return eventsOnDate.remove(eventToRemove);
     }
 
 
