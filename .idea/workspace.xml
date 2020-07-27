@@ -3,6 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="c4c241d3-fe45-463a-b83d-46eb64c94416" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sashatankov/booking/MovieTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sashatankov/booking/MovieTicket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sashatankov/booking/MovieTicketBookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sashatankov/booking/MovieTicketBookingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sashatankov/booking/StudentMovieTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sashatankov/booking/StudentMovieTicket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sashatankov/events/EventScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sashatankov/events/EventScheduler.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,8 +19,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -34,11 +39,18 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com/sashatankov" />
     <property name="nodejs_interpreter_path" value="/usr/bin/node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.sashatankov.booking" />
+      <recent name="com.sashatankov.events" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -67,7 +79,8 @@
       <workItem from="1595601826092" duration="16648000" />
       <workItem from="1595619450914" duration="8165000" />
       <workItem from="1595694414101" duration="4589000" />
-      <workItem from="1595738119285" duration="18703000" />
+      <workItem from="1595738119285" duration="19654000" />
+      <workItem from="1595843812018" duration="9490000" />
     </task>
     <servers />
   </component>

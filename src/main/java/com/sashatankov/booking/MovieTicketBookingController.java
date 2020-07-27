@@ -7,6 +7,9 @@ import com.sashatankov.events.MovieScreeningsController;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * a controller class that books tickets for movies screenings
+ */
 public class MovieTicketBookingController {
 
 
@@ -14,12 +17,22 @@ public class MovieTicketBookingController {
     private Map<MovieScreening, Auditorium> screeningSeating;
     private PaymentController ticketPayment;  // TODO to figure out what to do with pay-controller
 
+    /**
+     * a constructor for the class
+     * @param screeningsController a controller that holds and schedules the movie screenings
+     */
     public MovieTicketBookingController(MovieScreeningsController screeningsController) {
         this.screenings = screeningsController;
         this.screeningSeating = new HashMap<>();
     }
 
-
+    /**
+     * books a ticket for a specified movie screening
+     * @param screening a movie screening to book the ticket to
+     * @param row a row in the auditorium to book the ticket for
+     * @param seatInRow a seat in a row in the auditorium to book the ticket for
+     * @return a ticket
+     */
     public Ticket bookTicket(MovieScreening screening, int row, int seatInRow) {
 
         if(this.screeningSeating.containsKey(screening)) {
