@@ -15,9 +15,9 @@ public class MovieScreening implements EntertainmentEvent {
 
     /**
      * a constructor that creates a movie screening
-     * @param date the date of the screening in <YY-MM-DD> format
-     * @param time the time of the screening in <HH:MM> format
-     * @param movie the movie to screen, a com.sashatankov.events.Movie object
+     * @param date the date of the screening in <YYYY-MM-DD> format
+     * @param time the time of the screening in <HH:MM:SS> format
+     * @param movie the movie to screen, a Movie object
      */
     public MovieScreening(String date, String time, Movie movie) {
         this.date = LocalDate.parse(date);

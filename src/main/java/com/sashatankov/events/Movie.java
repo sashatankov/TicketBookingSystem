@@ -1,5 +1,7 @@
 package com.sashatankov.events;
 
+import com.sashatankov.events.exceptions.IllegalMovieDurationException;
+
 import java.util.Objects;
 
 /**
@@ -7,6 +9,7 @@ import java.util.Objects;
  */
 public class Movie {
 
+    private static final String ILLEGAL_MOVIE_DURATION_MESSAGE = "duration must be non-negative, got ";
     private String name;
     private String genre;
     private long durationInMinutes;
@@ -17,7 +20,10 @@ public class Movie {
      * @param genre genre of the movie
      * @param durationInMinutes the duration of the movie in minutes
      */
-    public Movie(String name, String genre, long durationInMinutes) {
+    public Movie(String name, String genre, long durationInMinutes) throws IllegalMovieDurationException {
+
+        if(durationInMinutes < 0)
+            throw new IllegalMovieDurationException(ILLEGAL_MOVIE_DURATION_MESSAGE + durationInMinutes);
 
         this.name = name;
         this.genre = genre;
@@ -51,7 +57,7 @@ public class Movie {
 
     @Override
     public String toString() {
-        return "com.sashatankov.events.Movie Name: " + this.getName() + "\n" +
+        return "Movie Name: " + this.getName() + "\n" +
                 "Genre: " + this.getGenre() + "\n" +
                 "Duration: " + this.getDurationInMinutes() + " minutes\n";
     }

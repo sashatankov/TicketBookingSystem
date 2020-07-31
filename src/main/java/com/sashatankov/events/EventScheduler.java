@@ -19,10 +19,22 @@ public class EventScheduler {
     private Set<EventVenue> eventVenues;
 
     /**
-     * a Constructor for tha class, creates a scheduler with empty schedule
+     * a Constructor for the class, creates a scheduler with empty schedule
      */
     public EventScheduler(){
         this.screenings = new HashMap<>();
+    }
+
+    /**
+     * a Constructor for the class, creates a scheduler with empty schedule
+     * and a predefined set of venues
+     * @param venues a set of event venues
+     */
+    public EventScheduler(Set<EventVenue> venues) {
+
+        this.screenings = new HashMap<>();
+        this.eventVenues.addAll(venues);
+
     }
 
     /**
@@ -37,12 +49,7 @@ public class EventScheduler {
         if(!this.screenings.containsKey(screeningDate))
             this.screenings.put(screeningDate, this.createEmptyVenueSchedule());
 
-        Map<EventVenue, LinkedList<EntertainmentEvent>> screeningsOnDate = this.screenings.get(screeningDate);
-        for(EventVenue venue: screeningsOnDate.keySet()) {
-            if(this.insertEventInSchedule(event, screeningsOnDate.get(venue)))
-                return true;
-        }
-        return false;
+        return this.insertEventInDateSchedule(event);
     }
 
     /**
@@ -52,18 +59,11 @@ public class EventScheduler {
      */
     public boolean removeEvent(EntertainmentEvent event) {
 
-
         LocalDate screeningDate = event.getEventDate();
         if(!this.screenings.containsKey(screeningDate))
             return false;
+        return this.removeEventFromDateSchedule(event);
 
-        Map<EventVenue, LinkedList<EntertainmentEvent>> screeningsOnDate = this.screenings.get(screeningDate);
-        for(EventVenue venue: screeningsOnDate.keySet()) {
-            if(this.removeEventInSchedule(event, screeningsOnDate.get(venue)))
-                return true;
-        }
-
-        return false;
     }
 
     /**
@@ -72,16 +72,77 @@ public class EventScheduler {
      * @return true, if added successfully, false otherwise.
      */
     public boolean addVenue(EventVenue venue) {
-        return this.eventVenues.add(venue);
+
+        if(this.eventVenues.contains(venue))
+            return false;
+
+        this.eventVenues.add(venue);
+        return this.addVenueToDateSchedules(venue);
+
     }
 
     /**
-     * removes a venue from a collection of venues in the schedule
-     * @param venue a venue to remove
-     * @return true, if removed successfully. false, otherwise.
+     * add the venue to the list of venues in every date schedule in the scheduler
+     * the venue either added to all date scheduler or added to no date schedule.
+     * @param venue venue to add the scheduler
+     * @return true, if venue added to all date schedules
      */
-    public boolean removeVenue(EventVenue venue) {
-        return this.eventVenues.remove(venue);
+    private boolean addVenueToDateSchedules(EventVenue venue) {
+
+        Map<EventVenue, LinkedList<EntertainmentEvent>> screeningsOnDate;
+        for(LocalDate date: this.screenings.keySet()) {
+            screeningsOnDate = this.screenings.get(date);
+            if(screeningsOnDate.containsKey(venue))
+                return false;
+        }
+
+        for(LocalDate date: this.screenings.keySet()) {
+            screeningsOnDate = this.screenings.get(date);
+            screeningsOnDate.put(venue, new LinkedList<>());
+        }
+
+        return true;
+
+    }
+
+
+
+    /**
+     * insert the event to the schedule of a particular date, that is the
+     * date of the event, assuming the the schedule exist in the scheduler
+     * @param event an event to insert
+     * @return true, if added successfully, the event does not collide with
+     * other events
+     */
+    private boolean insertEventInDateSchedule(EntertainmentEvent event) {
+
+        LocalDate screeningDate = event.getEventDate();
+        Map<EventVenue, LinkedList<EntertainmentEvent>> screeningsOnDate = this.screenings.get(screeningDate);
+        for(EventVenue venue: screeningsOnDate.keySet()) {
+            if(this.insertEventInVenueSchedule(event, screeningsOnDate.get(venue)))
+                return true;
+        }
+        return false;
+
+    }
+
+    /**
+     * removes the event from the schedule of a particular date,
+     * that is the date of the event, assuming that the scheduler exist
+     * in the scheduler
+     * @param event an event to remove
+     * @return true, if removed successfully.
+     */
+    private boolean removeEventFromDateSchedule(EntertainmentEvent event) {
+
+
+        LocalDate screeningDate = event.getEventDate();
+        Map<EventVenue, LinkedList<EntertainmentEvent>> screeningsOnDate = this.screenings.get(screeningDate);
+        for(EventVenue venue: screeningsOnDate.keySet()) {
+            if(this.removeEventFromVenueSchedule(event, screeningsOnDate.get(venue)))
+                return true;
+        }
+        return false;
     }
 
     /**
@@ -89,9 +150,9 @@ public class EventScheduler {
      * in a particular date.
      * @param eventToAdd an event
      * @param venueEventsOnDate a schedule of a venue on a date as linked list of event
-     * @return
+     * @return true, if inserted to schedule with no collisions
      */
-    private boolean insertEventInSchedule(EntertainmentEvent eventToAdd, LinkedList<EntertainmentEvent> venueEventsOnDate) {
+    private boolean insertEventInVenueSchedule(EntertainmentEvent eventToAdd, LinkedList<EntertainmentEvent> venueEventsOnDate) {
 
         EntertainmentEvent first, second;
         if(venueEventsOnDate.isEmpty()){
@@ -126,9 +187,9 @@ public class EventScheduler {
      * removes an event from a schedule of a venue on a particular date.
      * @param eventToRemove an event
      * @param venueEventsOnDate a schedule of a venue on a date as linked list of event
-     * @return
+     * @return true, if event is in the schedule and removed successfully.
      */
-    private boolean removeEventInSchedule(EntertainmentEvent eventToRemove, LinkedList<EntertainmentEvent> venueEventsOnDate) {
+    private boolean removeEventFromVenueSchedule(EntertainmentEvent eventToRemove, LinkedList<EntertainmentEvent> venueEventsOnDate) {
         return venueEventsOnDate.remove(eventToRemove);
     }
 

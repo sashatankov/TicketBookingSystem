@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4c241d3-fe45-463a-b83d-46eb64c94416" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sashatankov/events/IllegalAuditoriumConstrains.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sashatankov/events/SeatIsBookedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sashatankov/events/SeatOutOfBoundsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sashatankov/events/exceptions/IllegalMovieDurationException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sashatankov/events/Auditorium.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sashatankov/events/Auditorium.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/AuditoriumTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AuditoriumTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sashatankov/events/EventScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sashatankov/events/EventScheduler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sashatankov/events/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sashatankov/events/Movie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sashatankov/events/MovieScreening.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sashatankov/events/MovieScreening.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MovieScreeningTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MovieScreeningTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MovieTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MovieTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +40,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com/sashatankov" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com/sashatankov/events" />
     <property name="nodejs_interpreter_path" value="/usr/bin/node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
@@ -48,6 +49,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.sashatankov.events.exceptions" />
       <recent name="com.sashatankov.events" />
       <recent name="com.sashatankov.booking" />
     </key>
@@ -63,6 +65,22 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="AuditoriumTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TicketBookingSystem" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AuditoriumTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.AuditoriumTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -81,7 +99,8 @@
       <workItem from="1595694414101" duration="4589000" />
       <workItem from="1595738119285" duration="19654000" />
       <workItem from="1595843812018" duration="11317000" />
-      <workItem from="1595919629034" duration="7637000" />
+      <workItem from="1595919629034" duration="16333000" />
+      <workItem from="1596175704532" duration="4708000" />
     </task>
     <servers />
   </component>
