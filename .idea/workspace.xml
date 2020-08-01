@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4c241d3-fe45-463a-b83d-46eb64c94416" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sashatankov/events/exceptions/IllegalMovieDurationException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sashatankov/events/EventScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sashatankov/events/EventScheduler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sashatankov/events/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sashatankov/events/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sashatankov/events/MovieScreening.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sashatankov/events/MovieScreening.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MovieScreeningTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MovieScreeningTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MovieTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MovieTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sashatankov/events/MovieScreeningsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sashatankov/events/MovieScreeningsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/EventSchedulerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/EventSchedulerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MovieScreeningsControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MovieScreeningsControllerTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -100,7 +97,7 @@
       <workItem from="1595738119285" duration="19654000" />
       <workItem from="1595843812018" duration="11317000" />
       <workItem from="1595919629034" duration="16333000" />
-      <workItem from="1596175704532" duration="4708000" />
+      <workItem from="1596175704532" duration="16766000" />
     </task>
     <servers />
   </component>

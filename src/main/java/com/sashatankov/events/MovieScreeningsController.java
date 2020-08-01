@@ -1,5 +1,7 @@
 package com.sashatankov.events;
 
+import com.sashatankov.events.exceptions.IllegalMovieDurationException;
+
 import java.time.LocalDate;
 import java.util.*;
 
@@ -44,9 +46,7 @@ public class MovieScreeningsController {
 
         MovieScreening screeningToAdd = new MovieScreening(date, time, movie);
         movieScreenings.add(screeningToAdd);
-        screeningsScheduler.addEvent(screeningToAdd);
-
-        return true;
+        return screeningsScheduler.addEvent(screeningToAdd);
     }
 
     /**
@@ -60,9 +60,8 @@ public class MovieScreeningsController {
 
         MovieScreening screeningToRemove = new MovieScreening(date, time, movie);
         movieScreenings.remove(screeningToRemove);
-        screeningsScheduler.removeEvent(screeningToRemove);
+        return screeningsScheduler.removeEvent(screeningToRemove);
 
-        return true;
     }
 
     /**
@@ -72,7 +71,7 @@ public class MovieScreeningsController {
      * @param durationInMinutes the duration of the movie in minutes
      * @return true, if movie added successfully to the collection. false, otherwise
      */
-    public boolean addMovie(String movieName, String genre, long durationInMinutes) {
+    public boolean addMovie(String movieName, String genre, long durationInMinutes) throws IllegalMovieDurationException {
 
         Movie movie = new Movie(movieName, genre, durationInMinutes);
         this.movies.add(movie);
