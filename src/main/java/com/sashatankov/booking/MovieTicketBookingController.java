@@ -3,6 +3,8 @@ package com.sashatankov.booking;
 import com.sashatankov.events.Auditorium;
 import com.sashatankov.events.MovieScreening;
 import com.sashatankov.events.MovieScreeningsController;
+import com.sashatankov.events.exceptions.SeatIsBookedException;
+import com.sashatankov.events.exceptions.SeatOutOfBoundsException;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -33,7 +35,7 @@ public class MovieTicketBookingController {
      * @param seatInRow a seat in a row in the auditorium to book the ticket for
      * @return a ticket
      */
-    public Ticket bookTicket(MovieScreening screening, int row, int seatInRow) {
+    public Ticket bookTicket(MovieScreening screening, int row, int seatInRow) throws SeatIsBookedException, SeatOutOfBoundsException {
 
         if(this.screeningSeating.containsKey(screening)) {
             Auditorium auditorium = this.screeningSeating.get(screening);
