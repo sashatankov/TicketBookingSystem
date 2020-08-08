@@ -2,10 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4c241d3-fe45-463a-b83d-46eb64c94416" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sashatankov/events/MovieAuditoriumController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sashatankov/events/exceptions/EventNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sashatankov/events/exceptions/VenueNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sashatankov/schedulers/VenueScheduler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/VenuePlannerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MovieTheaterClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MovieTheaterClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MovieTheaterServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MovieTheaterServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sashatankov/booking/MovieTicketBookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sashatankov/booking/MovieTicketBookingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sashatankov/events/Auditorium.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sashatankov/events/Auditorium.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sashatankov/events/EventScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sashatankov/schedulers/EventScheduler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sashatankov/events/MovieScreeningsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sashatankov/events/MovieScreeningsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/EventSchedulerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/EventSchedulerTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,6 +53,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.sashatankov.schedulers" />
       <recent name="com.sashatankov.events.exceptions" />
       <recent name="com.sashatankov.events" />
       <recent name="com.sashatankov.booking" />
@@ -98,7 +106,9 @@
       <workItem from="1595843812018" duration="11317000" />
       <workItem from="1595919629034" duration="16333000" />
       <workItem from="1596175704532" duration="22850000" />
-      <workItem from="1596438893654" duration="4395000" />
+      <workItem from="1596438893654" duration="5058000" />
+      <workItem from="1596542089667" duration="6681000" />
+      <workItem from="1596869389029" duration="5258000" />
     </task>
     <task id="LOCAL-00001" summary="throwint exceptions added">
       <created>1596443417266</created>

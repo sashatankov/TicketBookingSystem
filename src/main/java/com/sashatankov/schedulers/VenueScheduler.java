@@ -1,4 +1,4 @@
-package com.sashatankov.booking;
+package com.sashatankov.schedulers;
 
 import com.sashatankov.events.EntertainmentEvent;
 import com.sashatankov.events.EventVenue;
@@ -8,7 +8,7 @@ import java.util.*;
 /**
  * a class that schedules events to their corresponding venues.
  */
-public class VenuePlanner {
+public class VenueScheduler {
 
     private Map<EntertainmentEvent, EventVenue> screeningSeating;
     private Set<Long> venueIds;
@@ -16,7 +16,7 @@ public class VenuePlanner {
     /**
      * a default constructor, empty scheduler is created
      */
-    public VenuePlanner() {
+    public VenueScheduler() {
 
         this.venueIds = new HashSet<>();
         this.screeningSeating = new HashMap<>();
@@ -28,7 +28,7 @@ public class VenuePlanner {
      * set of venues
      * @param venueIds ids of venues
      */
-    public VenuePlanner(Collection<Long> venueIds) {
+    public VenueScheduler(Collection<Long> venueIds) {
 
         this.venueIds = new HashSet<>();
         this.venueIds.addAll(venueIds);
@@ -37,8 +37,8 @@ public class VenuePlanner {
     }
 
     /**
-     * adds an event and its venue to the planner. the venue is where
-     * the event is hosted at.
+     * adds an event and its venue to the scheduler. the venue is where
+     * the event is hosted at. the venue must exist in the scheduler
      * @param event at event
      * @param venue the venue, the event is hosted at
      */
@@ -51,7 +51,7 @@ public class VenuePlanner {
     }
 
     /**
-     * remove the event and the associated venue from the planner
+     * remove the event and the associated venue from the scheduler
      * @param event an event to add
      * @param venue a venue the event is hosted at
      */
@@ -64,14 +64,34 @@ public class VenuePlanner {
     }
 
     /**
-     * add a venue to the colleaction of available venues for events
-     * in the planner.
+     * add a venue to the collection of available venues for events
+     * in the scheduler.
      * @param venueId an id of a venue
      * @return true if added
      */
     public boolean addVenue(long venueId) {
         return this.venueIds.add(venueId);
     }
+
+    /**
+     * method return the venue seating for a particular event
+     * @param event
+     * @return the venue seating of the event
+     */
+    public EventVenue getVenue(EntertainmentEvent event) {
+        return this.screeningSeating.get(event);
+    }
+
+    /**
+     * check if a venue exist for a particular event
+     * @param event
+     * @return true if venue for event exist
+     */
+    public boolean venueExist(EntertainmentEvent event) {
+        return this.screeningSeating.containsKey(event);
+    }
+
+
 
 
 }

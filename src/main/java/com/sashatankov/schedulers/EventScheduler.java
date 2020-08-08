@@ -1,4 +1,7 @@
-package com.sashatankov.events;
+package com.sashatankov.schedulers;
+
+import com.sashatankov.events.EntertainmentEvent;
+import com.sashatankov.events.EventVenue;
 
 import java.time.LocalDate;
 import java.time.LocalTime;

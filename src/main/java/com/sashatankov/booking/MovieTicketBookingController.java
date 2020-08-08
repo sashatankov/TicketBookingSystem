@@ -1,22 +1,24 @@
 package com.sashatankov.booking;
 
 import com.sashatankov.events.Auditorium;
+import com.sashatankov.events.MovieAuditoriumController;
 import com.sashatankov.events.MovieScreening;
 import com.sashatankov.events.MovieScreeningsController;
 import com.sashatankov.events.exceptions.SeatIsBookedException;
 import com.sashatankov.events.exceptions.SeatOutOfBoundsException;
+import com.sashatankov.events.exceptions.VenueNotFoundException;
+import com.sashatankov.schedulers.VenueScheduler;
 
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * a controller class that books tickets for movies screenings
  */
 public class MovieTicketBookingController {
 
+    private static final String MOVIE_SCREENING_VENUE_NOT_FOUND_MEGGAGE = "Venue not found for Movie Screening: ";
 
     private MovieScreeningsController screenings;
-    private Map<MovieScreening, Auditorium> screeningSeating;
+    private MovieAuditoriumController seatings;
     private PaymentController ticketPayment;  // TODO to figure out what to do with pay-controller
 
     /**
@@ -24,8 +26,10 @@ public class MovieTicketBookingController {
      * @param screeningsController a controller that holds and schedules the movie screenings
      */
     public MovieTicketBookingController(MovieScreeningsController screeningsController) {
+
         this.screenings = screeningsController;
-        this.screeningSeating = new HashMap<>();
+        this.seatings = new MovieAuditoriumController();
+
     }
 
     /**
@@ -35,18 +39,17 @@ public class MovieTicketBookingController {
      * @param seatInRow a seat in a row in the auditorium to book the ticket for
      * @return a ticket
      */
-    public Ticket bookTicket(MovieScreening screening, int row, int seatInRow) throws SeatIsBookedException, SeatOutOfBoundsException {
+    public Ticket bookTicket(MovieScreening screening, int row, int seatInRow) throws SeatIsBookedException,
+                                                                                      SeatOutOfBoundsException,
+                                                                                      VenueNotFoundException {
 
-        if(this.screeningSeating.containsKey(screening)) {
-            Auditorium auditorium = this.screeningSeating.get(screening);
-            if(auditorium.isSeatEmpty(row, seatInRow)){
-                auditorium.bookSeat(row, seatInRow);
-                return new MovieTicket(screening,
-                        auditorium.getId(),
-                        row, seatInRow);
-            }
-        }
-        return null; // TODO to throw an exception instead of returning null;
+        if(!this.seatings.auditoriumExist(screening))
+            throw new VenueNotFoundException(MOVIE_SCREENING_VENUE_NOT_FOUND_MEGGAGE + screening.getName());
+
+        Auditorium auditorium = this.seatings.getAuditorium(screening);
+        auditorium.bookSeat(row, seatInRow);
+        return new MovieTicket(screening, auditorium.getId(), row, seatInRow);
+
     }
 
 

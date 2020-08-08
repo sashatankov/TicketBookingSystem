@@ -1,6 +1,7 @@
 package com.sashatankov.events;
 
 import com.sashatankov.events.exceptions.IllegalMovieDurationException;
+import com.sashatankov.schedulers.EventScheduler;
 
 import java.time.LocalDate;
 import java.util.*;

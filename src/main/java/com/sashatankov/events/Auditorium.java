@@ -101,6 +101,9 @@ public class Auditorium implements EventVenue {
      * reserves a seat in an auditorium, by marking it as occupied
      * @param row row number
      * @param seatInRow number of seat in a row
+     * @throws SeatOutOfBoundsException if the row number and/or the seat number
+     * do not match the constrains of the auditorium
+     * @throws SeatIsBookedException if the seat is already booked.
      */
     public void bookSeat(int row, int seatInRow) throws SeatOutOfBoundsException, SeatIsBookedException {
         if(!this.isSeatEmpty(row, seatInRow))
@@ -136,7 +139,14 @@ public class Auditorium implements EventVenue {
         return "Auditorium " + this.getId();
     }
 
-
+    /**
+     * verifies the argumements are legal.
+     *  - The auditorium number is a positive number.
+     *  - the seatsInRow is an array of positive length and contains positive elements
+     * @param auditoriumNumber
+     * @param seatsInRows
+     * @throws IllegalAuditoriumConstrains if one of the arguments violates one the constraines above
+     */
     private void verifyConstructorArguments(long auditoriumNumber, int[] seatsInRows) throws IllegalAuditoriumConstrains {
 
         if(seatsInRows == null)
@@ -152,6 +162,16 @@ public class Auditorium implements EventVenue {
 
     }
 
+    /**
+     * verifies the argumements are legal.
+     *  - The auditorium number is a positive.
+     *  - The number of rows is a positive number
+     *  - the number of seats in row in positive
+     * @param auditoriumNumber
+     * @param rows
+     * @param seatInRow
+     * @throws IllegalAuditoriumConstrains if one of the arguments violates one the constraines above
+     */
     private void verifyConstructorArguments(long auditoriumNumber, int rows, int seatInRow)
             throws IllegalAuditoriumConstrains {
 
