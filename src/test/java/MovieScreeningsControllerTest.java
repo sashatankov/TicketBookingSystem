@@ -67,7 +67,7 @@ public class MovieScreeningsControllerTest {
 
             MovieScreeningsController controller = new MovieScreeningsController();
             assertTrue(controller.addMovie("Avatar", "Action", 150));
-            assertFalse(controller.removeMovie("Avatar"));
+            assertTrue(controller.removeMovie("Avatar"));
 
         } catch(Exception e) {}
 

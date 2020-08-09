@@ -2,6 +2,8 @@ import com.sashatankov.events.*;
 import com.sashatankov.schedulers.EventScheduler;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+
+
 public class EventSchedulerTest {
 
 

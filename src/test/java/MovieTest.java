@@ -44,10 +44,7 @@ public class MovieTest {
         try {
 
             Movie m = new Movie("Avatar", "", 150);
-            Movie m1 = new Movie("Avater", "Action", 0);
-
             assertEquals(m.getDurationInMinutes(), 150);
-            assertEquals(m.getDurationInMinutes(), 0);
 
         } catch(Exception e) {}
     }
