@@ -7,7 +7,7 @@ import com.sashatankov.events.MovieScreeningsController;
 import com.sashatankov.events.exceptions.SeatIsBookedException;
 import com.sashatankov.events.exceptions.SeatOutOfBoundsException;
 import com.sashatankov.events.exceptions.VenueNotFoundException;
-import com.sashatankov.schedulers.VenueScheduler;
+
 
 
 /**
@@ -19,7 +19,7 @@ public class MovieTicketBookingController {
 
     private MovieScreeningsController screenings;
     private MovieAuditoriumController seatings;
-    private PaymentController ticketPayment;  // TODO to figure out what to do with pay-controller
+    private PaymentController ticketPayment;  // TODO to figure out what to do with pay-controller, maybe put in MovieTheaterModel
 
     /**
      * a constructor for the class
